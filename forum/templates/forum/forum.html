@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<title>Document</title>
+<link rel="stylesheet" href="{% static 'css/forum.css' %}">
+<div class="forum-container">
+    <div class="forum-content">
+        <div class="forum-header">
+            <h1>Welcome to the Forum!</h1>
+        </div>
+        <div class="forum-body">
+            <p>This is where users can discuss various topics related to our website and services. Feel free to share your thoughts and ask questions!</p>
+        </div>
+        <div class="forum-posts">
+            {% if recent_posts %}
+                <ul>
+                {% for post in recent_posts %}
+                    <div class="post">
+                        <div class="post-internal">
+                            <li>
+                                <div class="post-header">
+                                    <h2><a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a></h2>
+                                    <h4>by: <\{{ post.author }}\></h4>
+                                    <p>Published on {{ post.published_date }}</p>
+                                </div>
+                                <div class="post-content">
+                                    {% if post.uimage %}<img src="{{ post.uimage.url }}" alt="Post Image" class="post-image">{% endif %}
+                                    <p>{{ post.text|truncatechars:100 }}</p>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No posts available.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

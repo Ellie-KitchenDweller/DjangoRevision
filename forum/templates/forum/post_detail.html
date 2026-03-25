@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/postpage.css' %}">
+</head>
+<body>
+    <div class="post-container">
+        <a class="return-link" href="{% url 'forum' %}"><--- Back to Forum</a>
+        <h1>{{ post.title }}</h1>
+        <h3>From: <\{{ post.author }}\></h3>
+        <div class="post-content">
+            {% if post.uimage %}
+                <img src="{{ post.uimage.url }}" alt="Post Image" class="post-image">
+            {% endif %}
+            <p>{{ post.text }}</p>
+        </div>
+        <p>{{ post.published_date }}</p>
+    </div>
+</body>
+</html>
+{% endblock content %}

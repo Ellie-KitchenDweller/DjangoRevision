@@ -1,0 +1,47 @@
+.forum-container {
+    padding: 5px 20px 5px 20px;
+}
+
+.forum-header, .forum-body {
+    text-align: center;
+}
+
+.post-image {
+    max-width: 35%;
+    max-height: 400px;
+    height: auto;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    gap: 15px;
+}
+
+li, li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.post {
+    padding-bottom: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;    
+    margin: 50px;
+}
+
+.post-internal {
+    padding: 20px;
+}
+
+ul {
+    padding: 20px 0px 0px 0px;
+}

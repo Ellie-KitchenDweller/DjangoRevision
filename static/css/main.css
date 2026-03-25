@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+    margin: 0;            /* remove browser default */
+    background: white;
+}
+
+/* make the page a column flexbox */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main-content {
+    flex: 1 0 auto;
+}

@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+<div class="home-container">
+	<div class="home-content">
+		<div class="home-header">
+			<h1>This is the home page!</h1>
+		</div>
+		<div class="home-body">
+			<h2>Welcome to our website!</h2>
+		</div>
+		<div class="home-images">
+			<img src="{% static 'home/images/home1.jpg' %}" alt="Placeholder image of a dog." class="home-image">
+			<img src="{% static 'home/images/home2.jpg' %}" alt="Placeholder image of a laptop on a table." class="home-image">
+		</div>
+		<div class="home-body">
+			<p>We are glad to have you here. Explore our services and feel free to contact us for more information.</p>
+		</div>
+		<div class = "home-map">
+            
+		</div>
+	</div>
+</div>
+{% endblock content %}

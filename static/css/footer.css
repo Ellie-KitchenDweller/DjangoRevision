@@ -1,0 +1,10 @@
+.footer {
+    /* position: static;  not needed, it’s the default */
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+    background-color: #cccccc;
+    text-align: center;
+    box-shadow: 0 -8px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;       /* do not let it collapse */
+}

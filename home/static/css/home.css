@@ -1,0 +1,35 @@
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.home-container {
+    font-family: Arial, sans-serif;
+    margin: 0px ;
+    padding: 0;
+}
+
+.home-content {
+    width: 100%;
+}
+.home-header, .home-body, .home-images, .home-footer p {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+}
+
+.home-images img {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    max-width: 400px;
+    margin: 10px 0;
+    border-radius: 2%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .home-container {
+    background-color: #1a1a1a;
+    color: #cccccc;
+}
